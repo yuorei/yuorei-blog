@@ -34,22 +34,29 @@
 
 
 .md h1 {
+    font-size: 120%;
+    font-weight: bold;
     background: linear-gradient(transparent 60%, rgba(135, 135, 135, 0.287) 30%);
 }
 
 .md h2 {
+    font-size: 120%;
+    font-weight: bold;
     background: linear-gradient(transparent 0%, rgb(255, 113, 113) 30%);
+}
+
+.md h3 {
+    font-size: 120%;
+    font-weight: bold;
+    background: linear-gradient(transparent 0%, rgb(109, 109, 109) 30%);
 }
 
 .md a {
     text-decoration: none;
+    color: #3f86f8;
 }
 
 .md code {
-    /* background-color: #f4f4f4;
-    border-radius: 5px;
-    padding: 0.2rem 0.4rem;
-    word-wrap: break-word; */
     color: #ffffff;
     display: block;
     white-space: pre-wrap;
