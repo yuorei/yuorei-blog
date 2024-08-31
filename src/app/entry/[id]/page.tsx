@@ -1,4 +1,4 @@
-import  ArticleComponent  from "@/app/components/Article";
+import ArticleComponent from "@/app/components/Article";
 import { getArticle } from "./getArticle";
 import type { Metadata, ResolvingMetadata } from "next";
 
@@ -23,8 +23,7 @@ export async function generateMetadata(
       type: "website",
       url: `https://blog.yuorei.com/entry/${id}`,
       images: [
-        article?.OGPURL ||
-          "https://blog.yuorei.com/opengraph-image.png",
+        article?.OGPURL || "https://blog.yuorei.com/opengraph-image.png",
       ],
     },
     twitter: {
@@ -34,8 +33,7 @@ export async function generateMetadata(
       site: "@yuorei71",
       creator: "@yuorei71",
       images: [
-        article?.OGPURL ||
-          "https://blog.yuorei.com/opengraph-image.png",
+        article?.OGPURL || "https://blog.yuorei.com/opengraph-image.png",
       ],
     },
   };

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 
 export type Article = {
   ID: string;
@@ -28,11 +28,13 @@ export default function Blog() {
         const data: Article[] = await response.json();
         // Dateを降順でソート
 
-        const sortedData = data.sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime());
+        const sortedData = data.sort(
+          (a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime()
+        );
 
         setArticles(sortedData);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
     fetchData();
