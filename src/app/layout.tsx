@@ -7,7 +7,7 @@ import GoogleAnalytics from "@/app/components/GoogleAnalytics/GoogleAnalytics";
 const inter = Inter({ subsets: ["latin"] });
 
 const siteName = "ユオレイブログ";
-const description = "ユオレイ(yuori)のブログです";
+const description = "ユオレイ(yuorei)のブログです";
 const url = "https://yuorei.com";
 
 export const metadata = {
