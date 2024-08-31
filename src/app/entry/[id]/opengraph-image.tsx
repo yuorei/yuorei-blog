@@ -30,8 +30,7 @@ export default async function og({ params }: { params: { id: string } }) {
         >
           <img
             src={
-              article.OGPURL ||
-              "https://blog.yuorei.com/opengraph-image.png"
+              article.OGPURL || "https://blog.yuorei.com/opengraph-image.png"
             }
             alt={article?.Title}
           />
