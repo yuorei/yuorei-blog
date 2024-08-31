@@ -1,14 +1,14 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Header from './components/Header'
-import Footer from './components/Footer';
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import GoogleAnalytics from "@/app/components/GoogleAnalytics/GoogleAnalytics";
 
+const inter = Inter({ subsets: ["latin"] });
 
-const inter = Inter({ subsets: ['latin'] })
-
-const siteName = 'ユオレイブログ';
-const description = 'ユオレイ(yuori)のブログです';
-const url = 'https://yuorei.com';
+const siteName = "ユオレイブログ";
+const description = "ユオレイ(yuori)のブログです";
+const url = "https://yuorei.com";
 
 export const metadata = {
   title: {
@@ -22,15 +22,15 @@ export const metadata = {
     description,
     url,
     siteName,
-    locale: 'ja_JP',
-    type: 'website',
+    locale: "ja_JP",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteName,
     description,
-    site: '',
-    creator: '@yuorei71',
+    site: "",
+    creator: "@yuorei71",
   },
   // verification: {
   //   google: 'サーチコンソールのやつ',
@@ -43,15 +43,18 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="ja">
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className={inter.className}>
         <Header />
         {children}
         <Footer />
       </body>
     </html>
-  )
+  );
 }
