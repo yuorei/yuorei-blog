@@ -13,6 +13,9 @@ export async function generateMetadata(
   const id = params.id;
 
   let article = await getArticle(id);
+  if (article.Content.length > 100) {
+    article.Content = article.Content.slice(0, 100) + "...";
+  }
 
   return {
     title: article?.Title || "yuorei blog",
