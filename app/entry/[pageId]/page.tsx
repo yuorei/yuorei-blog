@@ -102,14 +102,15 @@ type NotionDatabaseResponse = {
 }
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ pageId: string }>;
 };
 
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const id = params.id;
+  const paramsId = await params;
+  const id = paramsId.pageId;
 
   let blog = await getBlog({ id });
 
