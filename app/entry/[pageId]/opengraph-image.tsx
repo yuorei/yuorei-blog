@@ -11,11 +11,11 @@ export const size = {
 
 export default async function og({ params }: { params: { id: string } }) {
   const id = params.id;
-  let blog = await getBlog({ id });
+  const blog = await getBlog({ id });
   console.log("OGP動画取得", blog);
   try {
     console.log("OGP画像URL", blog?.image_url);
-    let imageResponse = new ImageResponse(
+    const imageResponse = new ImageResponse(
       (
         <div
           style={{

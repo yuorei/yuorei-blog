@@ -6,7 +6,6 @@ import ReactMarkdown from "react-markdown"
 import { Metadata, ResolvingMetadata } from "next"
 import getBlog from "./getBlog"
 
-
 interface TextObject {
   type: "text"
   text: {
@@ -111,8 +110,9 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const paramsId = await params;
   const id = paramsId.pageId;
-
-  let blog = await getBlog({ id });
+  // parentの使い道がわからないのでとりあえずconsole.logで出力
+  console.log("parent", parent);
+  const blog = await getBlog({ id });
 
   return {
     title: blog?.title || "ユオレイブログ",

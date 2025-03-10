@@ -1,5 +1,3 @@
-import { notFound } from "next/navigation"
-
 interface TextObject {
   type: "text"
   text: {
@@ -218,11 +216,10 @@ export default async function getBlog({ id }: { id: string }) {
 }
 
 function formatDate(dateString: string): string {
-    const options: Intl.DateTimeFormatOptions = {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }
-    return new Date(dateString).toLocaleDateString("en-US", options)
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   }
-  
+  return new Date(dateString).toLocaleDateString("en-US", options)
+}
