@@ -309,7 +309,7 @@ export default async function NotionDetailPage({ params }: { params: Promise<{ p
                   </blockquote>
                 ),
                 pre: ({ children }) => <pre className="bg-gray-900 rounded-lg p-4 my-6 overflow-x-auto">{children}</pre>,
-                code: ({ children }) => <code className="font-semibold text-white mt-10 mb-4">{children}</code>,
+                code: ({ children }) => <code className="font-semibold text-white mt-10 mb-4 bg-black">{children}</code>,
                 img: ({ src, alt }) => (
                   <div className="my-8">
                     <img src={src || "/placeholder.svg"} alt={alt} className="rounded-lg shadow-md w-full" />
